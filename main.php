@@ -9,8 +9,8 @@ Author URI: https://divi.space
 
 function ds_add_some_scripts() {
     wp_enqueue_script( 'ds-js-code', get_template_directory_uri() . '/custom-code/custom.js', array( 'jquery' ));
-    wp_register_style( 'custom-style', get_template_directory_uri() . '/custom-code/custom-style.css' );
-    wp_enqueue_style( 'custom-style' );
+    wp_register_style( 'custom', get_template_directory_uri() . '/custom-code/custom.css' );
+    wp_enqueue_style( 'custom' );
 }
 
 add_action( 'wp_enqueue_scripts', 'ds_add_some_scripts' );
@@ -21,7 +21,7 @@ require( plugin_dir_path( __FILE__ ) . '/custom-code/custom.php');
 Use the files in the 'custom-code' folder to add your own code...
 
 js = custom.js
-css = custom-style.css
+css = custom.css
 php = custom.php
 */
 
